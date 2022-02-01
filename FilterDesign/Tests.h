@@ -50,7 +50,7 @@ namespace FilterDesign
             const auto taps = FirDesign<Float>::WindowedSincLowPass(numtaps, cutoffFreq, samplingFreq);
 
             // —генерировано в питоне с помощью:
-            // >>> scipy.signal.firwin(51, 100, fs=3000, window='hamming')
+            // >>> scipy.signal.firwin(51, 50, fs=3000, window='hamming')
             const std::vector<Float> expectedTaps
             {
                 6.736078562158e-04, 8.622681701168e-04, 1.156858415402e-03, 1.597087043975e-03,
