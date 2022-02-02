@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "FirDesign.h"
 #include "WindowFuncs.h"
@@ -18,7 +18,7 @@ namespace FilterDesign
 
             const auto window = WindowFuncs<Float>::Hamming(numtaps, sym);
 
-            // Ñãåíåðèðîâàíî â ïèòîíå ñ ïîìîùüþ:
+            // Ð¡Ð³ÐµÐ½ÐµÑ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¾ Ð² Ð¿Ð¸Ñ‚Ð¾Ð½Ðµ Ñ Ð¿Ð¾Ð¼Ð¾Ñ‰ÑŒÑŽ:
             // >>> scipy.signal.hamming(51, True)
             const std::vector<Float> expectedWindow
             {
@@ -49,7 +49,7 @@ namespace FilterDesign
 
             const auto taps = FirDesign<Float>::WindowedSincLowPass(numtaps, cutoffFreq, samplingFreq);
 
-            // Ñãåíåðèðîâàíî â ïèòîíå ñ ïîìîùüþ:
+            // Ð¡Ð³ÐµÐ½ÐµÑ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¾ Ð² Ð¿Ð¸Ñ‚Ð¾Ð½Ðµ Ñ Ð¿Ð¾Ð¼Ð¾Ñ‰ÑŒÑŽ:
             // >>> scipy.signal.firwin(51, 50, fs=3000, window='hamming')
             const std::vector<Float> expectedTaps
             {

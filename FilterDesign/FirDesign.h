@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include "Utils.h"
 #include "WindowFuncs.h"
@@ -37,10 +37,10 @@ namespace FilterDesign
             const float nyquistFreq = samplingFreq * Float(0.5);
             const float normalizedCutoffFreq = cutoffFreq / nyquistFreq;
 
-            // TODO лишняя память
+            // TODO Р»РёС€РЅСЏСЏ РїР°РјСЏС‚СЊ
             auto args = CreateArgs(numtaps);
 
-            // TODO лишняя память
+            // TODO Р»РёС€РЅСЏСЏ РїР°РјСЏС‚СЊ
             const auto window = WindowFuncs<Float>::Hamming(numtaps, true);
 
             auto taps = Utils<Float>::Zeros(numtaps);
@@ -116,7 +116,7 @@ namespace FilterDesign
                 ? Float(1) 
                 : (left + right) * Float(0.5);
 
-            // args перезаписываются
+            // args РїРµСЂРµР·Р°РїРёСЃС‹РІР°СЋС‚СЃСЏ
             std::transform(args.begin(), args.end(), taps.begin(), args.begin(),
                 [&scaleFreq](const Float& m, const Float& h)
                 {

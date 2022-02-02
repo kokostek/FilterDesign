@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include "Utils.h"
 
@@ -62,7 +62,7 @@ namespace FilterDesign
 			// Extend window by 1 sample if needed for DFT-even symmetry
 			const auto extendedNumtaps = Extend(dst.size(), sym);
 
-			// TODO лишняя память
+			// TODO Р»РёС€РЅСЏСЏ РїР°РјСЏС‚СЊ
 			const auto fac = Utils<Float>::Linspace(-Float(M_PI), Float(M_PI), extendedNumtaps);
 			
 			Utils<Float>::FillZeros(dst);
